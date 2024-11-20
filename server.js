@@ -8,6 +8,10 @@ const port = process.env.PORT || 3000;
 // Built-in middleware for parsing incoming request bodies
 app.use(express.urlencoded({ extended: true }));  // For URL-encoded data (form submissions)
 app.use(express.json());  // For parsing JSON data
+// Default route to serve the homepage or provide basic feedback
+app.get('/', (req, res) => {
+  res.send('Welcome! The server is running. Use /send-email to send a message.');
+});
 
 // Route to handle form submission
 app.post('/send-email', (req, res) => {
