@@ -27,8 +27,8 @@ app.post('/send-email', (req, res) => {
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,  // Sender's email (using the value from .env)
-    to: 'recipient-email@example.com',  // The email where you want to receive the form submissions
+    from: process.env.EMAIL_USER,  
+    to: 'higginst.th@gmail.com',  
     subject: 'Contact Form Submission',
     text: `You have a new message from ${name} (${email}):\n\n${message}`
   };
