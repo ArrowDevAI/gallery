@@ -42,7 +42,7 @@ app.post('/send-email', (req, res) => {
       return res.status(500).send('Email failed to send');
     } else {
       console.log('Email sent: ' + info.response);
-      return res.status(200).send('Email sent successfully');
+      return res.status(200).send('Thank You for your Email! Looking forward to talking');
     }
   });
 });
