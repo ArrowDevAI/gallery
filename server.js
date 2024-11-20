@@ -27,11 +27,13 @@ app.post('/send-email', (req, res) => {
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,  
-    to: 'higginst.th@gmail.com',  
+    from: process.env.EMAIL_USER,  // Your authenticated email
+    to: 'higginst.th@gmail.com',  // Your receiving email
+    replyTo: email,               // The user's email from the form
     subject: 'Contact Form Submission',
     text: `You have a new message from ${name} (${email}):\n\n${message}`
   };
+  
 
   // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
