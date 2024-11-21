@@ -45,13 +45,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1><b>Technical Gallery</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Projects:</span> 
-      <button class="w3-button w3-white" onclick="openModal('modal1')"><i class="fa fa-comment w3-margin-right"></i>chatApp</button>
+      <button class="w3-button w3-white w3-hide-small" onclick="openModal('modal1')"><i class="fa fa-comment w3-margin-right"></i>chatApp</button>
       <button class="w3-button w3-white w3-hide-small" onClick="openModal('modal2')"><i class="fa fa-film w3-margin-right"></i>myFlix</button>
       <button class="w3-button w3-white w3-hide-small" onClick="openModal('modal3')"><i class="fa fa-globe w3-margin-right"></i>meetUp</button>
       <button class="w3-button w3-white w3-hide-small" onClick="openModal('modal4')"><i class="fa fa-bug w3-margin-right"></i>muni.</button>
@@ -206,17 +206,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!--Technologies-->
   <h4><b>Technologies</b></h4>
-    <div style="display: flex; justify-content: center; align-items: center;margin-bottom: 30px;margin-top: 30px;">
-        <i class="fa fa-github-square" style="font-size:48px;color:rgb(194, 188, 188); margin: 0 25px;"></i>
-        <i class="fa fa-cogs" style="font-size:48px;color:rgb(194, 188, 188); margin: 0 25px;"></i>
-        <i class="fa fa-html5" style="font-size:48px;color:rgb(194, 188, 188); margin: 0 25px;"></i>        
-        <img src="./img/icons/node.png" alt="node icon" style="width: 50px; height: 50px; margin-bottom: 5px; margin-left: 25px;margin-left: 25px;">
-        <img src="./img/icons/postman.png" alt="postman icon" style="width: 50px; margin-bottom: 5px; margin-left: 30px;margin-left: 30px;">
-        <img src="./img/icons/angular.png" alt="angular icon" style="width: 65px; margin-bottom: 5px; margin-left: 25px;margin-left: 30px;">
-        <img src="./img/icons/postgre.png" alt="postgre icon" style="width: 50px; margin-bottom: 5px; margin-left: 25px;margin-left: 30px;">
-        <img src="./img/icons/mongodb.png" alt="mongodb icon" style="width: 150px; margin-bottom: 5px; margin-left: 25px;margin-left: 30px;">
 
-    </div>
+ <div class="w3-container w3-padding-large w3-white" 
+     style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 30px auto; max-width: 800px; overflow: hidden;">
+    <i class="fa fa-github-square" style="font-size:48px;color:rgb(194, 188, 188); margin: 10px;"></i>
+    <i class="fa fa-cogs" style="font-size:48px;color:rgb(194, 188, 188); margin: 10px;"></i>
+    <i class="fa fa-html5" style="font-size:48px;color:rgb(194, 188, 188); margin: 10px;"></i>        
+    <img src="./img/icons/node.png" alt="node icon" style="width: 50px; height: 50px; margin: 10px;">
+    <img src="./img/icons/postman.png" alt="postman icon" style="width: 50px; margin: 10px;">
+    <img src="./img/icons/angular.png" alt="angular icon" style="width: 65px; margin: 10px;">
+    <img src="./img/icons/postgre.png" alt="postgre icon" style="width: 50px; margin: 10px;">
+    <img src="./img/icons/mongodb.png" alt="mongodb icon" style="width: 150px; margin: 10px;">
+</div>
+
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-large w3-grey">
