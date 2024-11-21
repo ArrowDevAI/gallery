@@ -63,8 +63,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
   
-  <!-- First Photo Grid-->
-<!-- First Photo Grid -->
+<!--Project Grid-->
+
 <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="./img/chatapp_snap.png" alt="Chat App" style="width:100%" class="w3-hover-opacity" onclick="openModal('modal1')">
@@ -111,10 +111,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
   
   <!-- Modal 1 -->
-  <div id="modal1" class="w3-modal">
+  <div id="modal1" class="w3-modal" onclick="handleOutsideClick(event, 'modal1')">
     <div class="w3-modal-content w3-animate-zoom">
       <header class="w3-container w3-white" style="margin-bottom: 20px;">
-        <span onclick="closeModal('modal1')" class="w3-button w3-display-topright" style="font-size: 40px;">&times;</span>
         <div style="display: flex; justify-content: center; align-items: center;">
             <h3>React Native Chat Application</h3>
           </div>
@@ -127,10 +126,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
   
   <!-- Modal 2 -->
-  <div id="modal2" class="w3-modal">
+  <div id="modal2" class="w3-modal" onclick="handleOutsideClick(event, 'modal2')">
     <div class="w3-modal-content w3-animate-zoom">
         <header class="w3-container w3-white" style="margin-bottom: 20px;">
-            <span onclick="closeModal('modal2')" class="w3-button w3-display-topright" style="font-size: 40px;">&times;</span>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <h3>Angular Movie Application</h3>
             </div>
@@ -143,10 +141,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
   
   <!-- Modal 3 -->
-  <div id="modal3" class="w3-modal">
+  <div id="modal3" class="w3-modal" onclick="handleOutsideClick(event, 'modal3')">
     <div class="w3-modal-content w3-animate-zoom">
         <header class="w3-container w3-white" style="margin-bottom: 20px;">
-            <span onclick="closeModal('modal3')" class="w3-button w3-display-topright" style="font-size: 40px;">&times;</span>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <h3>AWS PWA Event Locating Application</h3>
             </div>
@@ -160,10 +157,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   
   <!-- Second Photo Grid-->
 <!-- Modal 4 -->
-<div id="modal4" class="w3-modal">
+<div id="modal4" class="w3-modal" onclick="handleOutsideClick(event, 'modal4')">
     <div class="w3-modal-content w3-animate-zoom">
         <header class="w3-container w3-white" style="margin-bottom: 20px;">
-            <span onclick="closeModal('modal4')" class="w3-button w3-display-topright" style="font-size: 40px;">&times;</span>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <h3>React Leaderboard Application</h3>
             </div>
@@ -266,10 +262,16 @@ function openModal(modalId) {
     document.getElementById(modalId).style.display = 'block';
   }
 
-  // Function to close the modal
   function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
   }
+  function handleOutsideClick(event, modalId) {
+    const modalContent = document.querySelector(`#${modalId} .w3-modal-content`);
+    if (!modalContent.contains(event.target)) {
+      closeModal(modalId);
+    }
+  }
+  
 </script>
 
 </body>
